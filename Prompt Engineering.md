@@ -565,46 +565,90 @@ A precise prompt is not just about correct phrasing—it's about thinking like a
 ---
 
 ## 4. Choosing an AI Engine & Smart Usage Tips
-### How to Choose the Right Engine—and Why It Matters
-The choice of engine affects:
-*   Depth of reasoning and inference
-*   Response speed
-*   The amount of context the model can process
-*   The accuracy, format, and even the type of output you can produce
+# AI Model Selection & Best Practices
 
-### 🧪 Leading Models – A Comparison for Developers (as of 2025)
-
-| Model | Primary Use | Key Advantage / Disadvantage | Prompting Tips for Developers |
-| :--- | :--- | :--- | :--- |
-| **GPT-4o** | General code, fast responses, short texts | Fast, multimodal, good for almost everything; requires precise prompts | Give short instructions, request a clear output format (code, table, Markdown) |
-| **GPT-4o mini** | Lightweight interfaces, small scripts, bot integrations | Cheap and agile, for simple tasks; less reasoning depth | Don't expect deep analysis; use for "speed, not depth" |
-| **GPT-5** | Complex solutions, planning, high-level code | Powerful and feature-rich; requires precise context management and cost awareness | Build prompts with predefined context, format, and outcome |
-| **GPT-5 Nano** | API-based solutions, fast processes | Lightweight and optimal for automation; limited in context and accuracy | Prioritize use for short tasks and concise responses |
-| **Claude Sonnet 4.5**| Complex code, multi-step tasks, technical dialogue | Rated as excellent for code; not always available in third-party integrations | No need for "answer step-by-step"—has built-in reasoning |
-| **Claude Sonnet 5** | Complex tasks with logical depth, conversational agents | New generation with deeper understanding; lacks full official documentation | Use precise prompts. Specify the output format |
-| **Gemini 2.5 Pro** | Advanced multimodal: code, documents, images, text | Suitable for working with rich and diverse information; requires format control | Specify input types, desired output, and level of detail |
-| **Grok Code (xAI)**| Code writing, explanations, open-source code improvement | Focused on developers (Python, C++, Rust); less good at general tasks | Request "code only" or "code + short explanation" output |
-| **LLaMA 3 (Meta)**| Working with open-source code, local runs, experiments | Flexible and can be installed locally; less convenient for ready-made applications | Mainly for experienced developers for unique uses |
+### How to Choose the Right Engine — And Why It Matters
+Your choice of engine directly impacts several critical parameters:
+* **Reasoning Depth & Inference:** The ability to draw complex conclusions.
+* **Latency:** Response speed and throughput.
+* **Context Window:** The amount of information the model can process at once.
+* **Output Precision:** Accuracy, formatting adherence, and available output types.
 
 ---
-🅾️ **GPT-4o — An "All-in-One" Model from OpenAI**
-*   **Name Meaning:** GPT-4o = GPT-4 Omni → an "all-encompassing" model that understands text, images, and voice together.
-*   ⭐ **What's good about it:**
-    *   Truly multimodal (text/image/voice)
-    *   Very fast—responses are almost in real-time
-    *   Cheaper and more efficient than GPT-4
-    *   Especially strong in language, image, and conversational tasks (chat)
 
-⭐ **In our opinion – Excellent choices by task type:**
+### 🧪 Leading Models – Developer Comparison (As of Feb 2026)
+
+| Model | Primary Use Case | Key Pros / Cons | Developer Prompting Tips |
+| :--- | :--- | :--- | :--- |
+| **GPT-5** | Complex solutions, planning, high-level code | Powerful and feature-rich; requires strict context management and cost awareness | Build prompts with clear context, format, and desired outcome |
+| **GPT-5 mini** | API-based solutions, rapid processes | Lightweight, optimal for automation; limited in context and precision | Prioritize short tasks and concise responses |
+| **Claude Sonnet 4.5** | Complex code, multi-step tasks | Highly rated for coding; not always available in 3rd party integrations | No need for "step-by-step" prompting – has built-in internal reasoning |
+| **Claude Opus 4.5** | Deep logic, advanced analysis | The most powerful model in the Claude 4.5 family; relatively expensive | Use precise prompts. Explicitly specify output format |
+| **Gemini 3 Pro** | Complex tasks, advanced reasoning | Google's SOTA model; agentic capabilities | Build prompts with clear context context |
+| **Gemini 3 Flash** | Fast multimodal: code, images, video | 3x faster, cost-effective, excels in multimodal reasoning | Ideal for daily tasks and rapid analysis |
+| **Grok 4 / 4.1** | Advanced thinking processes, chat, code | Strong model with X integration; relatively new | Request detailed output with explanations |
+| **Llama 4** | Open source, local execution | Flexible, can be self-hosted; less convenient for ready-made apps | Suitable for experienced developers and custom use cases |
+
+---
+
+### ⭐ Top Picks – Our Recommendations by Use Case
+
 | Category | Recommended Models | Why? |
 | :--- | :--- | :--- |
-| **Fast and Lightweight** | GPT-4o mini, GPT-5 Nano | Good performance with fewer resources, available, suitable for automation |
-| **Code Tasks** | Claude Sonnet 4.5, GPT-5, Grok Code | High accuracy, code analysis, effective completion and improvement |
-| **Complex Tasks** | Claude Sonnet 5, GPT-5, Gemini 2.5 Pro | Deep understanding, support for logical chains, long context |
-| **Interactive Conversation** | GPT-4o | Excels at fluid conversation, understanding conversational context, natural user experience |
+| **Fast & Lightweight** | GPT-5 mini, Gemini 3 Flash | Good performance with lower resource usage, high availability, automation-ready |
+| **Coding Tasks** | Claude Sonnet 4.5, GPT-5, Gemini 3 Flash | High precision, code analysis, effective completion and refactoring |
+| **Complex Reasoning** | Claude Opus 4.5, GPT-5, Gemini 3 Pro | Deep understanding, support for logical chains, long context |
+| **Interactive Chat** | GPT-5, Grok 4.1 | Excels in fluid conversation and conversational context awareness |
+| **Open Source** | Llama 4 (Scout/Maverick) | Full control, on-premise installation, customization options |
 
-⚠️ **Note:** The information in the table is correct as of November 2025. The field of models is updated rapidly. It is recommended to check the versions and official documentation of each engine before significant operational use.
+> [!TIP]
+> **Pro Tip:** For tasks requiring strategic planning or complex logic, prioritize models with a **"Reasoning"** mode (like Deep Think). They may have higher latency, but they prevent costly architectural errors.
 
+---
+
+Beyond functional fit, selecting an AI engine requires understanding the underlying architecture and unique capabilities of each model. In this section, we analyze the key characteristics of the leading players in 2026:
+
+### 📊 Model Deep Dive
+
+#### GPT-5 (August 2025)
+* **Strengths:** AIME 2025: 94.6% (Math/Logic), SWE-bench Verified: 74.9% (Bug fixing).
+* **Best For:** Complex tasks, strategic planning, high-level coding.
+
+#### Gemini 3 Pro / Flash (Nov-Dec 2025)
+* **Gemini 3 Pro:** Google's most powerful model, featuring agentic capabilities. Released Nov 18, 2025.
+* **Gemini 3 Flash:** SWE-bench Verified: 78% (Excellent coding performance), MMMU-Pro: 81.2%. 3x faster than previous generations.
+* **Gemini 3 Deep Think:** Advanced version for hard reasoning tasks (Rolling out early 2026).
+
+#### Grok 4 / 4.1 (July-Nov 2025)
+* **Strengths:** Grok 4.1 Thinking ranked #1 on LMArena (1483 Elo).
+* **Precision:** Reduced hallucinations to 4.22% and excellent EQ-Bench performance.
+
+#### Llama 4 (April 2025)
+* **Variants:** Scout (109B), Maverick (400B), Behemoth (~2T).
+* **Advantages:** Open source, local installation support, full multimodal support.
+
+---
+
+### 🧮 Performance Benchmarks – What Do They Measure?
+
+* **AIME (American Invitational Mathematics Examination):** Measures mathematical reasoning and complex problem-solving without external tools.
+* **SWE-bench Verified:** Tests the ability to autonomously fix real-world bugs in GitHub projects.
+* **LMArena (Elo):** A crowdsourced leaderboard based on human preference and blind comparisons.
+* **MMMU-Pro:** Evaluates multimodal understanding (Text + Image) across various academic disciplines.
+
+---
+
+### ⚠️ Important Notes
+* **Last Updated:** February 2026. The AI landscape evolves rapidly; always check official documentation before production deployment.
+
+### 📚 Additional Resources
+* [OpenAI Documentation](https://platform.openai.com/docs)
+* [Anthropic Claude Docs](https://docs.anthropic.com/)
+* [Google Gemini API](https://ai.google.dev/)
+* [xAI Grok Docs](https://x.ai/api)
+* [Meta Llama](https://llama.meta.com/)
+
+*Last update: February 2026*
 ---
 
 ## 5. Conclusion and Looking Ahead
